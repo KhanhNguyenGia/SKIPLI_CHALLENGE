@@ -1,0 +1,10 @@
+.select {
+	display: flex;
+}
+
+.select-input {
+	width: 5rem;
+	padding: 12px 8px;
+	padding-left: 12px;
+	height: 40px;
+}

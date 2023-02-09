@@ -1,0 +1,32 @@
+:root {
+	--card-width: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+	:root {
+		--card-width: 33%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	:root {
+		--card-width: 50%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	:root {
+		--card-width: 100%;
+	}
+}
+
+.card-wrapper {
+	width: var(--card-width);
+	padding: 12px;
+}
+
+.card {
+	padding: 12px;
+	border-radius: 8px;
+	background: gray;
+}

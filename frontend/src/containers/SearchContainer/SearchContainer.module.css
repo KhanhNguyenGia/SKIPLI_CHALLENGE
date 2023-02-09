@@ -1,0 +1,31 @@
+.icon-wrapper {
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+}
+
+.label {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.select {
+	width: 5rem;
+	height: 40px;
+	padding: 8px 12px;
+	border-radius: 8px;
+	background: #eee;
+	border: 0;
+}
+
+.search {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}

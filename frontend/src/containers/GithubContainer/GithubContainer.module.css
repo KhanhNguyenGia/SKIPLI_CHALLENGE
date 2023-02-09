@@ -1,0 +1,41 @@
+.nav {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.user-avatar {
+	width: 100%;
+	border-radius: 4px;
+	overflow: hidden;
+	object-fit: cover;
+	object-position: center;
+}
+
+.user-name {
+	color: white;
+}
+
+.user-link,
+.user-link:visited {
+	color: white;
+}
+
+.heart {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	background: none;
+}
