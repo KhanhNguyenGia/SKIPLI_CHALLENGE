@@ -4,21 +4,15 @@
 
 - The project is divided into two folders, `frontend` and `backend`. The `frontend` folder contains the React application, while the `backend` folder contains the Express.js application.
 
-<br/>
-
 ### Folder `frontend`
 
 - The frontend application was bootstrapped using `create-react-app`. The root of the project includes 2 folders `public` and `src`, in addition to `.gitignore`, `package.json`, `package-lock.json` and `README.md`.
-
-<br/>
 
 #### Folder `public`
 
 - `public` folder contains any static files that are used by the application, such as `index.html` and `favicon.ico`.
 
 - These files are not processed by Webpack and will be copied as is to the `build` folder for serving to clients.
-
-<br/>
 
 #### Folder `src`
 
@@ -36,8 +30,6 @@
 
 - The `hooks` folder contains custom hooks.
 
-<br/>
-
 ### Folder `backend`
 
 - The backend application contains `server.js` as the entry point for the application. It uses `express` for setting up the server, middleware and routing.
@@ -48,29 +40,19 @@
 
 - It also contains the usual files such as `.gitignore`, `package.json` and `package-lock.json`.
 
-<br/>
-
 #### Folder `routes`
 
 - The `routes` folder contains the routes for the application. Each route is an instance of `Router` from `express`, which is then used by `express` in `server.js` to set up the routes. Each route also responsible for routing the request to the appropriate controller.
-
-<br/>
 
 #### Folder `controllers`
 
 - The `controllers` folder contains the controllers for the application. Each controller is responsible for handling the request and returning the appropriate response. Each controller is also responsible for validating the request and returning the appropriate error response.
 
-<br/>
-
 #### Folder `constants`
 
 - The `constants` folder contains the constants for the application. It contains `routes.js` for routing and `regex.js` for regular expression.
 
-<br/>
-
 ## Running the application
-
-<br/>
 
 ### Running the `frontend`
 
@@ -93,8 +75,6 @@ npm start
 ```
 
 4. The application will be available at [http://localhost:3000](http://localhost:3000).
-
-<br/>
 
 ### Running the `backend`
 
@@ -121,8 +101,6 @@ npm start
 5. The application will be available at [http://localhost:4000](http://localhost:4000).
 
 ## Application in action
-
-<br/>
 
 ### `Firebase`
 
