@@ -8,7 +8,7 @@ const db = getFirestore();
 const octokit = new Octokit({ auth: process.env.GITHUB_ACCESS_TOKEN });
 
 async function searchGithubUsers(req, res) {
-	const { q, page = 1, per_page = 30 } = req.query;
+	const { q, page = 1, per_page = 40 } = req.query;
 	if (!q) return res.status(400).send({ message: 'Require search term' });
 	if (isNaN(page) || isNaN(per_page))
 		return res.status(400).send({ message: 'Invalid page or per_page' });
@@ -22,11 +22,18 @@ async function searchGithubUsers(req, res) {
 			page,
 			per_page,
 		});
-		const { items: users } = result.data;
+		const { items } = result.data;
+		const users = await Promise.all(
+			items.map(({ id }) =>
+				octokit.request('GET /user/{id}', {
+					id: id,
+				})
+			)
+		);
 		const filteredUsers = users.map(
-			({ id, login, avatar_url, html_url, public_repos, followers }) => ({
-				id,
+			({ data: { login, id, avatar_url, html_url, public_repos, followers } }) => ({
 				login,
+				id,
 				avatar_url,
 				html_url,
 				public_repos,

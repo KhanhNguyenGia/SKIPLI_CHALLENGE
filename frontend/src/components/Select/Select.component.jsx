@@ -9,7 +9,17 @@ const Select = forwardRef(({ values, ...rest }, ref) => {
 
 	return (
 		<div className={style.select}>
-			<Input className={style['select-input']} list='brow' onChange={onChange} {...rest} />
+			<Input
+				style={{
+					width: '5rem',
+					padding: ' 12px 8px',
+					paddingLeft: ' 12px',
+					height: '40px',
+				}}
+				list='brow'
+				onChange={onChange}
+				{...rest}
+			/>
 			<datalist id='brow'>
 				{values.map(({ value, option }) => (
 					<option key={option} value={value}>

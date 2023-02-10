@@ -64,7 +64,7 @@ async function validateAccessCode(req, res) {
 			validated: true,
 			code: '',
 		});
-		return res.status(200).send({ message: 'Phone number has been validated', phone });
+		return res.status(200).send({ message: 'Phone number has been validated', phoneNumber: phone });
 	} catch (error) {
 		console.error(error);
 		return res.status(500).send(error);
